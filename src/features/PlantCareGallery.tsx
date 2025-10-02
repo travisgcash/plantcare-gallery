@@ -16,6 +16,7 @@ const LOCATIONS = [
   { key: "backyard", label: "Backyard" },
   { key: "basement-patio", label: "Basement Patio" },
   { key: "basement-interior", label: "Basement Interior" },
+  {key: "back-porch", label: "Back Porch"}
 ] as const;
 
 type LocationKey = typeof LOCATIONS[number]["key"];
@@ -680,6 +681,192 @@ id: "hydrangea-limelight-1",
     prune: "Only tip-prune new growth to shape. Do not cut into bare wood—arborvitae will not regrow from it."
   }
 },
+{
+  id: "ponytail-palm-1",
+  name: "Ponytail Palm (Beaucarnea recurvata)",
+  imageUrl: "/plants/Ponytail_Palm.jpg",
+  link: "https://hort.extension.wisc.edu/articles/ponytail-palm-beaucarnea-recurvata/",
+  notes: "Unique houseplant with a bulbous base (caudex) that stores water and long, cascading leaves. Despite its name, it is not a true palm. Very drought tolerant and low-maintenance. Prefers bright light.",
+  location: "back-porch",
+  watering: {
+    summer: "Water sparingly; allow soil to dry out completely between waterings",
+    winter: "Very minimal watering; once every 4–6 weeks is sufficient"
+  },
+  maintenance: { prune: "whenever", feed: "spring" }
+},
+{
+  id: "rex-begonia-1",
+  name: "Rex Begonia (Begonia rex-cultorum)",
+  imageUrl: "/plants/Rex_Begonia.jpg",
+  link: "https://www.thesill.com/blogs/plants-101/how-to-care-for-rex-begonia-begonia-rex",
+  notes: "Striking foliage plant with patterned, colorful leaves. Grown for ornamental leaves rather than flowers. Prefers indirect light and high humidity. Sensitive to overwatering.",
+  location: "back-porch",
+  watering: {
+    summer: "Keep soil evenly moist but not soggy; water when top inch of soil is dry",
+    winter: "Reduce watering; keep soil barely moist"
+  },
+  maintenance: { prune: "whenever", feed: "summer" }
+},
+{
+  id: "caladium-pink-panther-1",
+  name: "Caladium 'Pink Panther'",
+  imageUrl: "/plants/Calladium_Pink_Panther.jpg",
+  link: "https://www.thespruce.com/how-to-grow-caladium-1902744#:~:text=have%20been%20growing.-,Fertilizer,or%20use%20slow%2Drelease%20pellets.", 
+  notes: "Colorful foliage plant with heart-shaped leaves splashed with pink and green. Grown for ornamental leaves. Loves heat and humidity. Ideal for shady to partially shaded areas and great in containers or borders.",
+  location: "back-porch",
+  watering: {
+    summer: "Prefers consistent soil moisture; water thoroughly once or twice per week when soil begins to dry",
+    winter: "Dormant in winter; keep tubers dry and do not overwater"
+  },
+  maintenance: { prune: "whenever", feed: "spring" },
+  tagImages: [
+    "/plants/Calladium_Pink_Panther_tag1.jpg",
+    "/plants/Calladium_Pink_Panther_tag2.jpg"
+]
+},
+{
+  id: "syngonium-pink-1",
+  name: "Syngonium (Arrowhead Plant, Pink variety)",
+  imageUrl: "/plants/Syngonium_Pink.jpg",
+  link: "https://www.thespruce.com/grow-syngonium-indoors-1902739",
+  notes: "Tropical foliage plant with arrow-shaped leaves, this variety shows pink tones. Easy to grow and adaptable as a trailing or climbing houseplant. Prefers bright, indirect light and moderate humidity.",
+  location: "back-porch",
+  watering: {
+    summer: "Keep soil evenly moist but not waterlogged; water when top inch of soil is dry",
+    winter: "Reduce watering; allow soil to dry slightly more between waterings"
+  },
+  maintenance: { prune: "whenever", feed: "summer" }
+},
+{
+  id: "syngonium-green-1",
+  name: "Syngonium (Arrowhead Plant, Green variety)",
+  imageUrl: "/plants/Syngonium_Green.jpg",
+  link: "https://www.thespruce.com/grow-syngonium-indoors-1902739",
+  notes: "Fast-growing Arrowhead Plant with solid green to lightly variegated foliage. Can trail or climb with support. Tolerant of lower light but thrives in bright, indirect light. Easy-care tropical foliage plant.",
+  location: "back-porch",
+  watering: {
+    summer: "Keep soil evenly moist but not soggy; water when top inch of soil feels dry",
+    winter: "Reduce watering; allow soil to dry out slightly more between waterings"
+  },
+  maintenance: { prune: "whenever", feed: "spring" }
+},
+{
+  id: "aglaonema-1",
+  name: "Aglaonema (Chinese Evergreen, Red variety 'Siam Aurora')",
+  imageUrl: "/plants/Aglaonema.jpg",
+  link: "https://www.gardenia.net/plant/aglaonema-siam-aurora-chinese-evergreen",
+  notes: "Colorful foliage plant with striking pink and green variegated leaves. Known for tolerance of low light and easy care. Prefers warm temperatures and moderate humidity.",
+  location: "back-porch",
+  watering: {
+    summer: "Keep soil consistently moist but not soggy; water when top inch is dry",
+    winter: "Reduce watering frequency; allow soil to dry slightly more"
+  },
+  maintenance: { prune: "whenever", feed: "summer" }
+},
+{
+  id: "hoya-carnosa-1",
+  name: "Hoya carnosa (Variegated Wax Plant)",
+  imageUrl: "/plants/Hoya_Carnosa.jpg",
+  link: "https://www.thespruce.com/hoya-plants-1315763",
+  notes: "Tropical vining plant with thick, waxy leaves and creamy variegation. Can produce clusters of fragrant, star-shaped flowers. Prefers bright, indirect light and well-draining soil.",
+  location: "back-porch",
+  watering: {
+    summer: "Water moderately; allow the top 1–2 inches of soil to dry out between waterings",
+    winter: "Water sparingly; let soil dry more thoroughly before watering"
+  },
+  maintenance: { prune: "whenever", feed: "spring" }
+},
+{
+  id: "pothos-marble-queen-1",
+  name: "Pothos (Epipremnum aureum 'Marble Queen')",
+  imageUrl: "/plants/Golden_Pothos_White.jpg",
+  link: "https://www.thespruce.com/pothos-an-easy-to-grow-houseplant-1403154",
+  notes: "Attractive trailing plant with white and green marbled foliage. Easy to grow and tolerant of a wide range of conditions. Thrives in bright, indirect light but also adapts to lower light.",
+  location: "back-porch",
+  watering: {
+    summer: "Water when the top 1–2 inches of soil are dry; avoid waterlogging",
+    winter: "Allow soil to dry more thoroughly between waterings"
+  },
+  maintenance: { prune: "whenever", feed: "summer" }
+},
+{
+  id: "fittonia-nerve-1",
+  name: "Fittonia (Nerve Plant, Red variety)",
+  imageUrl: "/plants/Fittonia_Nerve_Primetime.jpg",
+  link: "https://www.provenwinners.com/plants/fittonia/network-news-primetime-nerve-plant-fittonia-albivenis",
+  notes: "Compact tropical plant with striking red-veined green leaves. Prefers high humidity and indirect light. Can be temperamental if allowed to dry out but revives quickly after watering.",
+  location: "back-porch",
+  watering: {
+    summer: "Keep soil consistently moist but not soggy; do not allow to dry out completely",
+    winter: "Water moderately; allow the top layer of soil to dry slightly before watering again"
+  },
+  maintenance: { prune: "whenever", feed: "spring" }
+},
+{
+  id: "calathea-rattlesnake-1",
+  name: "Calathea lancifolia (Rattlesnake Plant)",
+  imageUrl: "/plants/Prayer_Plant_Croton.jpg",
+  link: "https://www.thespruce.com/growing-rattlesnake-plants-5088292",
+  notes: "Striking tropical plant with long, narrow leaves marked by dark green spots and purple undersides. Member of the Prayer Plant family. Prefers warm temperatures, high humidity, and indirect light.",
+  location: "back-porch",
+  watering: {
+    summer: "Keep soil consistently moist but not soggy; use filtered water if possible",
+    winter: "Water less frequently; allow the top layer of soil to dry slightly"
+  },
+  maintenance: { prune: "whenever", feed: "spring" }
+},
+{
+  id: "leopard-lily-1",
+  name: "Ledebouria socialis (Leopard Lily / Silver Squill)",
+  imageUrl: "/plants/Leopard_Lily.jpg",
+  link: "https://plants.ces.ncsu.edu/plants/ledebouria-socialis/",
+  notes: "Bulbous succulent with green leaves mottled in silver and purple-tinted bases. Drought-tolerant and hardy, often grown as a houseplant or in containers. Prefers bright, indirect light.",
+  location: "back-porch",
+  watering: {
+    summer: "Allow soil to dry between waterings; water moderately during active growth",
+    winter: "Water very sparingly; nearly dry soil is preferred during dormancy"
+  },
+  maintenance: { prune: "whenever", feed: "spring" }
+},
+{
+  id: "croton-multicolor-1",
+  name: "Croton (Codiaeum variegatum, Narrow-leaf variety)",
+  imageUrl: "/plants/Croton_Luna_Multicolor.jpg",
+  link: "https://www.thespruce.com/grow-codiaeum-variegatum-1902750",
+  notes: "Colorful tropical foliage plant with narrow, twisted leaves variegated in green, yellow, orange, and red. Prefers warm temperatures, bright light, and consistent humidity.",
+  location: "back-porch",
+  watering: {
+    summer: "Keep soil evenly moist; water when top inch feels dry",
+    winter: "Reduce watering slightly; avoid letting soil dry out completely"
+  },
+  maintenance: { prune: "whenever", feed: "summer" }
+},
+{
+  id: "monstera-deliciosa-1",
+  name: "Monstera deliciosa (Swiss Cheese Plant)",
+  imageUrl: "/plants/Monstera_Deliciosa.jpg",
+  link: "https://www.thespruce.com/how-to-grow-monstera-deliciosa-5072671",
+  notes: "Iconic tropical plant with large, glossy leaves that develop dramatic splits and holes as they mature. A climbing aroid that benefits from support like a moss pole. Prefers bright, indirect light and moderate to high humidity.",
+  location: "back-porch",
+  watering: {
+    summer: "Water when the top 1–2 inches of soil are dry; keep soil evenly moist but not soggy",
+    winter: "Water less frequently; allow soil to dry out slightly more between waterings"
+  },
+  maintenance: { prune: "whenever", feed: "spring" }
+},
+{
+  id: "pothos-golden-1",
+  name: "Pothos (Epipremnum aureum 'Golden')",
+  imageUrl: "/plants/Fern_Pothos_Greenhouse.jpg",
+  link: "https://www.thespruce.com/pothos-an-easy-to-grow-houseplant-1403154",
+  notes: "Classic trailing plant with heart-shaped green leaves variegated with yellow. Very hardy and adaptable, tolerant of lower light but thrives in bright, indirect light. Excellent as a hanging or climbing plant.",
+  location: "back-porch",
+  watering: {
+    summer: "Water when the top 1–2 inches of soil are dry; avoid waterlogging",
+    winter: "Allow soil to dry more thoroughly between waterings"
+  },
+  maintenance: { prune: "whenever", feed: "summer" }
+},
 ]
 export default function PlantCareGallery() {
   const [plants] = useState<Plant[]>(PLANTS);
@@ -718,9 +905,10 @@ export default function PlantCareGallery() {
       "front-lawn": [],
       "sunny-side": [],
       "shady-side": [],
-      backyard: [],
+      "backyard": [],
       "basement-patio": [],
       "basement-interior": [],
+      "back-porch": [],
     };
     for (const p of filtered) map[p.location].push(p);
     return map;

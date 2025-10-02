@@ -1,8 +1,19 @@
 import { NextResponse } from "next/server"
 import { supabaseServer } from "@/lib/supabase"
 
-export async function DELETE(_: Request, { params }: { params: { id: string } }) {
-  const { error } = await supabaseServer().from("plants").delete().eq("id", params.id)
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+type RouteContext = { params: Promise<{ id: string }> }
+
+export async function DELETE(_req: Request, context: RouteContext) {
+  const { id } = await context.params
+
+  const { error } = await supabaseServer()
+    .from("plants")
+    .delete()
+    .eq("id", id)
+
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 })
+  }
+
   return NextResponse.json({ ok: true })
 }
