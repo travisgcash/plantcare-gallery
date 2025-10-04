@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { supabaseServer } from "@/lib/supabase"
 
+// GET /api/plants → fetch all plants
 export async function GET() {
   const { data, error } = await supabaseServer()
     .from("plants")
@@ -11,6 +12,7 @@ export async function GET() {
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
 
+  // map DB rows → frontend-friendly shape
   const out = (data ?? []).map((r) => ({
     id: r.id,
     name: r.name,
@@ -38,8 +40,9 @@ export async function GET() {
   return NextResponse.json(out)
 }
 
+// POST /api/plants → add a new plant
 export async function POST(req: Request) {
-  const body = await req.json()
+  const body = await req.json().catch(() => null)
 
   if (!body?.name || !body?.imageUrl) {
     return NextResponse.json(
@@ -72,6 +75,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
 
+  // return inserted row in app-friendly shape
   return NextResponse.json({
     id: data!.id,
     name: data!.name,
